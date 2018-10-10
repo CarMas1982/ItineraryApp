@@ -15,6 +15,7 @@
 		33D93FB4216E9EB00095696B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D93FB3216E9EB00095696B /* Data.swift */; };
 		33D93FB8216EA2BE0095696B /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D93FB7216EA2BE0095696B /* TripsViewController.storyboard */; };
 		33D93FBA216EA2D80095696B /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D93FB9216EA2D80095696B /* TripsViewController.swift */; };
+		33D93FBC216EAB9F0095696B /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D93FBB216EAB9F0095696B /* TripsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		33D93FB3216E9EB00095696B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		33D93FB7216EA2BE0095696B /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		33D93FB9216EA2D80095696B /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		33D93FBB216EAB9F0095696B /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				33D93FB7216EA2BE0095696B /* TripsViewController.storyboard */,
 				33D93FB9216EA2D80095696B /* TripsViewController.swift */,
+				33D93FBB216EAB9F0095696B /* TripsTableViewCell.swift */,
 			);
 			path = TripsViewController;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D93FBC216EAB9F0095696B /* TripsTableViewCell.swift in Sources */,
 				33D93FB0216E9BE10095696B /* TripModel.swift in Sources */,
 				33D93F9C216A80560095696B /* AppDelegate.swift in Sources */,
 				33D93FB2216E9BF10095696B /* TripFunctions.swift in Sources */,
