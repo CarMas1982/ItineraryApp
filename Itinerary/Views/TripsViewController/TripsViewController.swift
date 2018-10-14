@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TripsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class TripsViewController: UIViewController{
    
     
 
@@ -26,8 +26,11 @@ class TripsViewController: UIViewController, UITableViewDataSource, UITableViewD
         })
     }
     
+}
+
+extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     
-    //MARK: - TableView Data Source
+    //MARK: - Tableview Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.tripModels.count
     }
@@ -35,15 +38,14 @@ class TripsViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell
-    
+        
         cell.setup(tripModel: Data.tripModels[indexPath.row])
         return cell
     }
+    
     
     //MARK: - TableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
-
-    
 }

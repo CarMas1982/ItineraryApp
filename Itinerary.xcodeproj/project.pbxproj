@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33148CCE2173D0D800613950 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33148CCD2173D0D800613950 /* UIViewExtensions.swift */; };
 		33D93F9C216A80560095696B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D93F9B216A80560095696B /* AppDelegate.swift */; };
 		33D93FA3216A80560095696B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D93FA2216A80560095696B /* Assets.xcassets */; };
 		33D93FA6216A80560095696B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D93FA4216A80560095696B /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33148CCD2173D0D800613950 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		33D93F98216A80560095696B /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D93F9B216A80560095696B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D93FA2216A80560095696B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33148CCC2173D09000613950 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33148CCD2173D0D800613950 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		33D93F8F216A80560095696B = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		33D93F9A216A80560095696B /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				33148CCC2173D09000613950 /* Extensions */,
 				33D93FB5216EA22A0095696B /* Views */,
 				33D93FAD216E9BA10095696B /* Model */,
 				33D93F9B216A80560095696B /* AppDelegate.swift */,
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33D93FBC216EAB9F0095696B /* TripsTableViewCell.swift in Sources */,
+				33148CCE2173D0D800613950 /* UIViewExtensions.swift in Sources */,
 				33D93FB0216E9BE10095696B /* TripModel.swift in Sources */,
 				33D93F9C216A80560095696B /* AppDelegate.swift in Sources */,
 				33D93FB2216E9BF10095696B /* TripFunctions.swift in Sources */,
