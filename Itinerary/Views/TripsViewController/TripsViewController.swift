@@ -24,6 +24,8 @@ class TripsViewController: UIViewController{
             // invocato quando il completion viene invocato
             self?.tableView.reloadData()
         })
+        
+        view.backgroundColor = Theme.background
     }
     
 }
