@@ -52,11 +52,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-H7-onY">
+                                <rect key="frame" x="303" y="591" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="plus"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CJM-wT-Ipc"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="PJc-H7-onY" id="V4k-0G-Fkd"/>
                         <outlet property="tableView" destination="Kqf-Xw-dV2" id="Fe3-aD-U2d"/>
                     </connections>
                 </viewController>
@@ -65,4 +71,7 @@
             <point key="canvasLocation" x="133.59999999999999" y="82.3088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="32" height="32"/>
+    </resources>
 </document>

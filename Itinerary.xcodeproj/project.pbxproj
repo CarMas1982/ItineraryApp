@@ -11,6 +11,7 @@
 		33148CD12173D2C900613950 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33148CD02173D2C900613950 /* Theme.swift */; };
 		33148CD32173D5C700613950 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33148CD22173D5C600613950 /* FugazOne-Regular.ttf */; };
 		33148CD52173DC1200613950 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33148CD42173DC1200613950 /* Colors.xcassets */; };
+		33CE028B21767D17008A7D28 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE028A21767D17008A7D28 /* UIButtonExtension.swift */; };
 		33D93F9C216A80560095696B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D93F9B216A80560095696B /* AppDelegate.swift */; };
 		33D93FA3216A80560095696B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D93FA2216A80560095696B /* Assets.xcassets */; };
 		33D93FA6216A80560095696B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D93FA4216A80560095696B /* LaunchScreen.storyboard */; };
@@ -27,6 +28,7 @@
 		33148CD02173D2C900613950 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		33148CD22173D5C600613950 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
 		33148CD42173DC1200613950 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		33CE028A21767D17008A7D28 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		33D93F98216A80560095696B /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D93F9B216A80560095696B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D93FA2216A80560095696B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				33148CCD2173D0D800613950 /* UIViewExtensions.swift */,
+				33CE028A21767D17008A7D28 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				33148CCE2173D0D800613950 /* UIViewExtensions.swift in Sources */,
 				33D93FB0216E9BE10095696B /* TripModel.swift in Sources */,
 				33D93F9C216A80560095696B /* AppDelegate.swift in Sources */,
+				33CE028B21767D17008A7D28 /* UIButtonExtension.swift in Sources */,
 				33D93FB2216E9BF10095696B /* TripFunctions.swift in Sources */,
 				33D93FB4216E9EB00095696B /* Data.swift in Sources */,
 				33D93FBA216EA2D80095696B /* TripsViewController.swift in Sources */,

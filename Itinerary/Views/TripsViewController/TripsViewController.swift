@@ -13,6 +13,7 @@ class TripsViewController: UIViewController{
     
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class TripsViewController: UIViewController{
         })
         
         view.backgroundColor = Theme.background
+        addButton.createFloatingActionButton()
     }
     
 }
