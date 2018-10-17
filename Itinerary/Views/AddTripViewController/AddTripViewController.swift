@@ -28,6 +28,7 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
+        //Salvataggio dei dati
         TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!))
         if let doneSaving = doneSaving {
             doneSaving()
