@@ -57,7 +57,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
-                                    <segue destination="sWK-1m-SIl" kind="presentation" id="Gse-h5-9nV"/>
+                                    <segue destination="sWK-1m-SIl" kind="presentation" identifier="toAddTripSegue" id="Gse-h5-9nV"/>
                                 </connections>
                             </button>
                         </subviews>

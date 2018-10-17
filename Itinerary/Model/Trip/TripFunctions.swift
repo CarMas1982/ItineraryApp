@@ -12,7 +12,7 @@ class TripFunctions {
      //mettendo static posso accedere alla funzione senza dover instanziare ogni volta la classe
     
     static func createTrip(tripModel: TripModel){
-        
+        Data.tripModels.append(tripModel)
     }
     
     static func readTrips(completion: @escaping () -> ()){
