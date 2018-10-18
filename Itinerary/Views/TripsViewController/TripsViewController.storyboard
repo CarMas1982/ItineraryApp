@@ -17,21 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kqf-Xw-dV2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kqf-Xw-dV2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="JjQ-vy-oa9">
+                                    <rect key="frame" x="0.0" y="188" width="375" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="Txv-kF-QvD" customClass="TripsTableViewCell" customModule="Itinerary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="Txv-kF-QvD" customClass="TripsTableViewCell" customModule="Itinerary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Txv-kF-QvD" id="PEn-L3-mRu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntl-ei-8gt">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntl-ei-8gt">
                                                     <rect key="frame" x="15" y="11" width="345" height="138"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCr-ec-hme">
                                                             <rect key="frame" x="8" y="21" width="329" height="97"/>
@@ -40,14 +44,25 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlU-OV-Pgz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="138"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </imageView>
                                                     </subviews>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ntl-ei-8gt" firstAttribute="bottom" secondItem="PEn-L3-mRu" secondAttribute="bottomMargin" id="PJu-HV-74l"/>
+                                                <constraint firstItem="ntl-ei-8gt" firstAttribute="top" secondItem="PEn-L3-mRu" secondAttribute="topMargin" id="di3-4I-5Xu"/>
+                                                <constraint firstItem="ntl-ei-8gt" firstAttribute="leading" secondItem="PEn-L3-mRu" secondAttribute="leadingMargin" id="htd-Nk-vjs"/>
+                                                <constraint firstItem="ntl-ei-8gt" firstAttribute="trailing" secondItem="PEn-L3-mRu" secondAttribute="trailingMargin" id="jZA-Jy-QpA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="cardView" destination="ntl-ei-8gt" id="iHz-Tg-mXw"/>
                                             <outlet property="titleLabel" destination="CCr-ec-hme" id="XDy-Eb-TDz"/>
+                                            <outlet property="tripImageView" destination="mlU-OV-Pgz" id="8tZ-Js-gr4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -55,7 +70,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-H7-onY">
                                 <rect key="frame" x="303" y="591" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <state key="normal" image="plus"/>
+                                <state key="normal" image="add"/>
                                 <connections>
                                     <segue destination="sWK-1m-SIl" kind="presentation" identifier="toAddTripSegue" id="Gse-h5-9nV"/>
                                 </connections>
@@ -83,6 +98,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus" width="32" height="32"/>
+        <image name="add" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
 </document>
