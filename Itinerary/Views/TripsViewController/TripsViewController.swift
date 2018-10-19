@@ -62,4 +62,35 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let trip = Data.tripModels[indexPath.row]
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
+            
+            //aggiungiamo un alert con due azioni una per bottone
+            let alert = UIAlertController(title: "Delete Trip", message: "Are you sure you want to delete this \(trip.title)?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+                actionPerformed(false)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in
+                //Perform delete
+                TripFunctions.deleteTrip(index: indexPath.row)
+                //            tableView.reloadData() // così facendo l'eliminazione è troppo veloce
+                
+                //otteniamo l'effetto che all'atto del delete le celle scompaiono con una animazione
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                actionPerformed(true) //per far scomparire il Delete
+            }))
+            self.present(alert,animated: true)
+
+        }
+        delete.image = #imageLiteral(resourceName: "Delete")
+//        delete.backgroundColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
 }
