@@ -64,7 +64,6 @@ class AddTripViewController: UIViewController {
         
         //Salvataggio dei dati
         TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
-        
         if let doneSaving = doneSaving {
             doneSaving()
         }
@@ -99,9 +98,8 @@ class AddTripViewController: UIViewController {
                     let gotoSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
                         DispatchQueue.main.async {
                             if let url = URL(string: UIApplication.openSettingsURLString) {
-                                 UIApplication.shared.open(url, options: [:])
+                                UIApplication.shared.open(url, options: [:])
                             }
-                           
                         }
                     }
                     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -109,10 +107,10 @@ class AddTripViewController: UIViewController {
                     alert.addAction(gotoSettingsAction)
                     alert.addAction(cancelAction)
                     self.present(alert,animated: true)
+                }
             }
         }
     }
-}
 }
 
 extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -121,7 +119,6 @@ extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationCo
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.imageView.image = image
         }
-        
         dismiss(animated: true)
     }
     
