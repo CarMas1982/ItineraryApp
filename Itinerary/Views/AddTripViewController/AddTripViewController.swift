@@ -36,7 +36,7 @@ class AddTripViewController: UIViewController {
             let trip = Data.tripModels[index]
             tripTextField.text = trip.title
             imageView.image = trip.image
-            titleLabel.text = "Edit Trip"
+            titleLabel.text = "Edit Trip" //Label del popup modificata in Edit quando siamo nella funzione di editing!!
         }
         
     }

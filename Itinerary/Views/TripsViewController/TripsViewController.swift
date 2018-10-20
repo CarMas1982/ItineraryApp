@@ -14,7 +14,10 @@ class TripsViewController: UIViewController{
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var addButton: UIButton!
+    @IBOutlet var helpView: UIVisualEffectView!
+    
     var tripIndexToEdit: Int?
+    var seenHelpView = "seenTripHelp"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +25,20 @@ class TripsViewController: UIViewController{
         tableView.dataSource = self
         tableView.delegate = self
         
-        TripFunctions.readTrips(completion: { [weak self] in
+        TripFunctions.readTrips(completion: { [unowned self] in
             // invocato quando il completion viene invocato
-            self?.tableView.reloadData()
+            self.tableView.reloadData()
+            
+            //in questo modo vedo l'help solo se ci sono dati
+            if Data.tripModels.count > 0 {
+                if UserDefaults.standard.bool(forKey: self.seenHelpView) == false{
+                    self.view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.frame
+                }
+            }
         })
+        
+        
         
         view.backgroundColor = Theme.backgroundColor
         addButton.createFloatingActionButton()
@@ -44,6 +57,18 @@ class TripsViewController: UIViewController{
             tripIndexToEdit = nil
         }
     }
+    
+    @IBAction func closeHelpView(_ sender: AppUIButton) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.helpView.alpha = 0
+        }) { (success) in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.seenHelpView)
+        }
+        
+    }
+    
+    
     
 }
 
