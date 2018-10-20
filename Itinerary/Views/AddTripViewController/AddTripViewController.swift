@@ -79,7 +79,9 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func addPhoto(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+        
+        // eseguo il controllo per vedere se la photoLibrary non è vuota, questo non serve più a partire da iOS11
+//        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             PHPhotoLibrary.requestAuthorization { (status) in
                 switch status {
                 case .authorized:
@@ -109,7 +111,7 @@ class AddTripViewController: UIViewController {
                     self.present(alert,animated: true)
                 }
             }
-        }
+//        }
     }
 }
 
