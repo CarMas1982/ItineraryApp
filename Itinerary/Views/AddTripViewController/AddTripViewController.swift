@@ -18,6 +18,7 @@ class AddTripViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     
     var doneSaving: (() -> ())? //callback function
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,13 @@ class AddTripViewController: UIViewController {
         titleLabel.layer.shadowColor = UIColor.white.cgColor
         titleLabel.layer.shadowOffset = CGSize.zero
         titleLabel.layer.shadowRadius = 5
+        
+        if let index = tripIndexToEdit {
+            let trip = Data.tripModels[index]
+            tripTextField.text = trip.title
+            imageView.image = trip.image
+            titleLabel.text = "Edit Trip"
+        }
         
     }
     
@@ -62,8 +70,14 @@ class AddTripViewController: UIViewController {
             
         }
         
+        if let index = tripIndexToEdit {
+            TripFunctions.updateTrip(at: index, title: newTripName, image: imageView.image)
+        } else {
+            TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        }
+        
         //Salvataggio dei dati
-        TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        
         if let doneSaving = doneSaving {
             doneSaving()
         }

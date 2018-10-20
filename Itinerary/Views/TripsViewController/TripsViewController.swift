@@ -14,6 +14,7 @@ class TripsViewController: UIViewController{
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var addButton: UIButton!
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,13 @@ class TripsViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTripSegue" {
             let popup = segue.destination as! AddTripViewController
+            popup.tripIndexToEdit = self.tripIndexToEdit
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            
+            // Reset the tripIndexToEdit in our TripsViewController before the popup opens. If we don't set tripIndexToEdit back to nil then the popup will always think you want to edit when you try to ADD a new trip.
+            tripIndexToEdit = nil
         }
     }
     
@@ -92,5 +97,18 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
 //        delete.backgroundColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
         
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            self.tripIndexToEdit = indexPath.row
+            self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
+            actionPerformed(true)
+        }
+        
+        edit.image = #imageLiteral(resourceName: "Edit")
+        edit.backgroundColor = UIColor(named: "Edit")
+        return UISwipeActionsConfiguration(actions: [edit])
     }
 }
