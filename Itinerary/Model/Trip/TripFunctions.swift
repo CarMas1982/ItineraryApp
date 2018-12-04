@@ -19,9 +19,10 @@ class TripFunctions {
         
         DispatchQueue.global(qos: .userInteractive).async {
             if Data.tripModels.count == 0 {
-                Data.tripModels.append(TripModel(title: "Trip to Bali"))
-                Data.tripModels.append(TripModel(title: "Mexico"))
-                Data.tripModels.append(TripModel(title: "Russian Trip"))
+//                Data.tripModels.append(TripModel(title: "Trip to Bali"))
+//                Data.tripModels.append(TripModel(title: "Mexico"))
+//                Data.tripModels.append(TripModel(title: "Russian Trip"))
+                Data.tripModels = MockData.createMockTripModelData()
             }
         }
         
@@ -38,6 +39,16 @@ class TripFunctions {
     
     static func deleteTrip(index: Int){
         Data.tripModels.remove(at: index)
+    }
+    
+    static func readTrip(by id: UUID, completion: @escaping (TripModel?)->()) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let trip = Data.tripModels.first(where: { $0.id == id})
+            
+            DispatchQueue.main.async {
+                completion(trip)
+            }
+        }
     }
     
     

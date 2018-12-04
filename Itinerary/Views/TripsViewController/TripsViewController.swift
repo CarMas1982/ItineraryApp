@@ -55,6 +55,12 @@ class TripsViewController: UIViewController{
             
             // Reset the tripIndexToEdit in our TripsViewController before the popup opens. If we don't set tripIndexToEdit back to nil then the popup will always think you want to edit when you try to ADD a new trip.
             tripIndexToEdit = nil
+//        } else if segue.identifier == "toActivitesViewController" {
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                let dest = segue.destination as! ActivitiesViewController
+//                dest.tripId = Data.tripModels[indexPath.row].id
+//            }
+//
         }
     }
     
@@ -141,5 +147,13 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [edit])
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip = Data.tripModels[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
+        vc.tripId = trip.id
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

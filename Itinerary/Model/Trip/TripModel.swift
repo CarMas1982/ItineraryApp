@@ -8,17 +8,29 @@
 
 import UIKit
 
-class TripModel {
+struct TripModel {
     
     let id: UUID
     var title: String
     var image: UIImage?
+    var dayModels = [DayModel]()
     
     
-    init(title: String, image: UIImage? = nil) {
+//    init(title: String, image: UIImage? = nil) {
+//        id = UUID() //crea un id
+//        self.title = title
+//        self.image = image
+//    }
+    
+    
+    init(title: String, image: UIImage? = nil, dayModels: [DayModel]? = nil) {
         id = UUID() //crea un id
         self.title = title
         self.image = image
+
+        if let dayModels = dayModels {
+            self.dayModels = dayModels
+        }
     }
     
 }
