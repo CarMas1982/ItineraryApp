@@ -11,6 +11,8 @@
 		33148CD12173D2C900613950 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33148CD02173D2C900613950 /* Theme.swift */; };
 		33148CD32173D5C700613950 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33148CD22173D5C600613950 /* FugazOne-Regular.ttf */; };
 		33148CD52173DC1200613950 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33148CD42173DC1200613950 /* Colors.xcassets */; };
+		337D1D9621BC3BC1000EEF85 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337D1D9521BC3BC1000EEF85 /* ActivitiesTableViewCell.swift */; };
+		337D1D9821BC3C9B000EEF85 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337D1D9721BC3C9B000EEF85 /* HeaderTableViewCell.swift */; };
 		33BD9D4121B324270012047A /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD9D4021B324270012047A /* DayModel.swift */; };
 		33BD9D4421B3253B0012047A /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD9D4321B3253B0012047A /* ActivityModel.swift */; };
 		33BD9D4621B326080012047A /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD9D4521B326080012047A /* ActivityType.swift */; };
@@ -38,6 +40,8 @@
 		33148CD02173D2C900613950 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		33148CD22173D5C600613950 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
 		33148CD42173DC1200613950 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		337D1D9521BC3BC1000EEF85 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
+		337D1D9721BC3C9B000EEF85 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		33BD9D4021B324270012047A /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		33BD9D4321B3253B0012047A /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		33BD9D4521B326080012047A /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			children = (
 				33BD9D4A21B32FD70012047A /* ActivitiesViewController.swift */,
 				33BD9D4C21B3306C0012047A /* ActivitiesViewController.storyboard */,
+				337D1D9521BC3BC1000EEF85 /* ActivitiesTableViewCell.swift */,
+				337D1D9721BC3C9B000EEF85 /* HeaderTableViewCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -160,9 +166,6 @@
 				33148CCF2173D2A700613950 /* Resources */,
 				33D93FB5216EA22A0095696B /* Views */,
 				33D93FAD216E9BA10095696B /* Model */,
-				33BD9D4221B324520012047A /* Day */,
-				33BD9D4721B3263E0012047A /* Activity */,
-				33BD9D4E21B330780012047A /* ActivitiesViewController */,
 				33D93F9B216A80560095696B /* AppDelegate.swift */,
 				33D93FA2216A80560095696B /* Assets.xcassets */,
 				33D93FA4216A80560095696B /* LaunchScreen.storyboard */,
@@ -174,9 +177,11 @@
 		33D93FAD216E9BA10095696B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				33D93FB3216E9EB00095696B /* Data.swift */,
-				33D93FAE216E9BBD0095696B /* Trip */,
 				33BD9D4821B326860012047A /* MockData.swift */,
+				33D93FB3216E9EB00095696B /* Data.swift */,
+				33BD9D4721B3263E0012047A /* Activity */,
+				33BD9D4221B324520012047A /* Day */,
+				33D93FAE216E9BBD0095696B /* Trip */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 		33D93FB5216EA22A0095696B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33BD9D4E21B330780012047A /* ActivitiesViewController */,
 				33CE028E2176820B008A7D28 /* AddTripViewController */,
 				33D93FB6216EA28E0095696B /* TripsViewController */,
 			);
@@ -286,6 +292,7 @@
 			files = (
 				33D93FBC216EAB9F0095696B /* TripsTableViewCell.swift in Sources */,
 				33BD9D4621B326080012047A /* ActivityType.swift in Sources */,
+				337D1D9821BC3C9B000EEF85 /* HeaderTableViewCell.swift in Sources */,
 				33148CD12173D2C900613950 /* Theme.swift in Sources */,
 				33148CCE2173D0D800613950 /* UIViewExtensions.swift in Sources */,
 				33D93FB0216E9BE10095696B /* TripModel.swift in Sources */,
@@ -300,6 +307,7 @@
 				33D93FBA216EA2D80095696B /* TripsViewController.swift in Sources */,
 				33BD9D4921B326860012047A /* MockData.swift in Sources */,
 				33BD9D4421B3253B0012047A /* ActivityModel.swift in Sources */,
+				337D1D9621BC3BC1000EEF85 /* ActivitiesTableViewCell.swift in Sources */,
 				33CE029321768724008A7D28 /* PopupUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
