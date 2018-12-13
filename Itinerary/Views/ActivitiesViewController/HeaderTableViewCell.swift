@@ -13,6 +13,7 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     
+//    static let identifier = String(describing: self)
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

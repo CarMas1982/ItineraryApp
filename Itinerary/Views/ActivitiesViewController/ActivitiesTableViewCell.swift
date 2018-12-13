@@ -16,6 +16,8 @@ class ActivitiesTableViewCell: UITableViewCell {
     @IBOutlet var activityImageView: UIImageView!
     
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         cardView.addShadowAndRoundedCorners()

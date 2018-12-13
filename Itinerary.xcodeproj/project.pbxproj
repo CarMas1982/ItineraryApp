@@ -13,6 +13,7 @@
 		33148CD52173DC1200613950 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33148CD42173DC1200613950 /* Colors.xcassets */; };
 		337D1D9621BC3BC1000EEF85 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337D1D9521BC3BC1000EEF85 /* ActivitiesTableViewCell.swift */; };
 		337D1D9821BC3C9B000EEF85 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337D1D9721BC3C9B000EEF85 /* HeaderTableViewCell.swift */; };
+		3393C82921C2C5A4004B2AC4 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3393C82821C2C5A4004B2AC4 /* UITableViewCellExtension.swift */; };
 		33BD9D4121B324270012047A /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD9D4021B324270012047A /* DayModel.swift */; };
 		33BD9D4421B3253B0012047A /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD9D4321B3253B0012047A /* ActivityModel.swift */; };
 		33BD9D4621B326080012047A /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD9D4521B326080012047A /* ActivityType.swift */; };
@@ -42,6 +43,7 @@
 		33148CD42173DC1200613950 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		337D1D9521BC3BC1000EEF85 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		337D1D9721BC3C9B000EEF85 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3393C82821C2C5A4004B2AC4 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		33BD9D4021B324270012047A /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		33BD9D4321B3253B0012047A /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		33BD9D4521B326080012047A /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				33148CCD2173D0D800613950 /* UIViewExtensions.swift */,
 				33CE028A21767D17008A7D28 /* UIButtonExtension.swift */,
+				3393C82821C2C5A4004B2AC4 /* UITableViewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				33148CCE2173D0D800613950 /* UIViewExtensions.swift in Sources */,
 				33D93FB0216E9BE10095696B /* TripModel.swift in Sources */,
 				33BD9D4B21B32FD70012047A /* ActivitiesViewController.swift in Sources */,
+				3393C82921C2C5A4004B2AC4 /* UITableViewCellExtension.swift in Sources */,
 				33D93F9C216A80560095696B /* AppDelegate.swift in Sources */,
 				33CE029021768253008A7D28 /* AddTripViewController.swift in Sources */,
 				33CE028B21767D17008A7D28 /* UIButtonExtension.swift in Sources */,
