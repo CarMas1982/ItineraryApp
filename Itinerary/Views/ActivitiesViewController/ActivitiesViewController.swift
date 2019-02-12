@@ -14,12 +14,13 @@ class ActivitiesViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     var tripId: UUID!
     var tripModel: TripModel?
+    var tripTitle = ""
     var sectionHeaderHeight: CGFloat = 0.0
     
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = tripTitle
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -28,7 +29,7 @@ class ActivitiesViewController: UIViewController {
             self.tripModel = model
             
             guard let model = model else {return}
-            self.title = model.title
+            
             self.backgroundImageView.image = model.image
             self.tableView.reloadData()
         }

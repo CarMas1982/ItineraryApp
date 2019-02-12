@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let navBarAppearenceProxy = UINavigationBar.appearance()
+        navBarAppearenceProxy.barTintColor = Theme.accent
+        let font = UIFont(name: Theme.mainFontName, size: 20)!
+        navBarAppearenceProxy.titleTextAttributes = [NSAttributedString.Key.font:font, NSAttributedString.Key.foregroundColor: UIColor.white]
         return true
     }
 
