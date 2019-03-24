@@ -12,6 +12,7 @@ class ActivitiesViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet var addButton: AppUIButton!
     var tripId: UUID!
     var tripModel: TripModel?
     var tripTitle = ""
@@ -21,6 +22,7 @@ class ActivitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tripTitle
+        addButton.createFloatingActionButton()
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -42,7 +44,28 @@ class ActivitiesViewController: UIViewController {
     @IBAction func back(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-
+    
+    
+    @IBAction func addAction(_ sender: AppUIButton) {
+        let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+        let dayAction = UIAlertAction(title: "Day", style: .default, handler: handleAddDay)
+        
+        let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
+            print("Add new activity")
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(activityAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
+    
+    func handleAddDay(action: UIAlertAction){
+        print("Add new day")
+    }
    
 
 }

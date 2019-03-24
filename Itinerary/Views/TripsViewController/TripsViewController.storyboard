@@ -69,9 +69,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-H7-onY">
-                                <rect key="frame" x="303" y="591" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-H7-onY">
+                                <rect key="frame" x="299" y="611" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="a4J-Mp-gaC"/>
+                                    <constraint firstAttribute="width" constant="56" id="mMy-LG-SVk"/>
+                                </constraints>
                                 <state key="normal" image="add"/>
                                 <connections>
                                     <segue destination="sWK-1m-SIl" kind="presentation" identifier="toAddTripSegue" id="Gse-h5-9nV"/>
@@ -79,6 +82,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CJM-wT-Ipc" firstAttribute="bottom" secondItem="PJc-H7-onY" secondAttribute="bottom" id="lqs-EJ-FLI"/>
+                            <constraint firstItem="CJM-wT-Ipc" firstAttribute="trailing" secondItem="PJc-H7-onY" secondAttribute="trailing" constant="20" id="vXr-tE-7Xe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CJM-wT-Ipc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Trips" id="pNB-C9-Cw6"/>

@@ -130,12 +130,25 @@
                                     <outlet property="delegate" destination="Y14-IJ-WPR" id="ynn-qa-V8N"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txE-C9-0YI" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="299" y="611" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="7p9-Sy-V3B"/>
+                                    <constraint firstAttribute="height" constant="56" id="CT1-OG-NJ3"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addAction:" destination="Y14-IJ-WPR" eventType="touchUpInside" id="Kmy-6n-P9N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KWp-rk-qmN" firstAttribute="bottom" secondItem="txE-C9-0YI" secondAttribute="bottom" id="HoQ-IK-mUm"/>
                             <constraint firstItem="t98-68-7Hu" firstAttribute="trailing" secondItem="nNn-Ih-sTC" secondAttribute="trailing" id="L22-oE-bFT"/>
                             <constraint firstItem="t98-68-7Hu" firstAttribute="top" secondItem="nNn-Ih-sTC" secondAttribute="top" id="Vsz-c7-aLv"/>
                             <constraint firstItem="Nr6-UA-Qvb" firstAttribute="leading" secondItem="KWp-rk-qmN" secondAttribute="leading" id="a0V-A0-skt"/>
+                            <constraint firstItem="KWp-rk-qmN" firstAttribute="trailing" secondItem="txE-C9-0YI" secondAttribute="trailing" constant="20" id="aL6-Uu-RNl"/>
                             <constraint firstItem="Nr6-UA-Qvb" firstAttribute="bottom" secondItem="nNn-Ih-sTC" secondAttribute="bottom" id="bZt-Le-MaO"/>
                             <constraint firstItem="t98-68-7Hu" firstAttribute="bottom" secondItem="KWp-rk-qmN" secondAttribute="bottom" id="dQ7-6W-PWZ"/>
                             <constraint firstItem="t98-68-7Hu" firstAttribute="leading" secondItem="nNn-Ih-sTC" secondAttribute="leading" id="pKv-xE-7ih"/>
@@ -145,6 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="KWp-rk-qmN"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="txE-C9-0YI" id="GD1-6i-ZbC"/>
                         <outlet property="backgroundImageView" destination="t98-68-7Hu" id="qUg-1m-hDd"/>
                         <outlet property="tableView" destination="Nr6-UA-Qvb" id="Kss-Un-dJW"/>
                     </connections>
@@ -155,6 +169,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="25.600000381469727" height="25.600000381469727"/>
         <namedColor name="Accent">
             <color red="0.14509803921568629" green="0.20000000000000001" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
