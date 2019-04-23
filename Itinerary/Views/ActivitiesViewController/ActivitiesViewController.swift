@@ -59,6 +59,11 @@ class ActivitiesViewController: UIViewController {
         alert.addAction(dayAction)
         alert.addAction(activityAction)
         alert.addAction(cancelAction)
+        
+        // Add action sheet for iPad
+        alert.popoverPresentationController?.sourceView = sender
+        // per far puntare la freccia dell'action sheet sul bottone
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: 0)
         present(alert, animated: true)
     }
     
